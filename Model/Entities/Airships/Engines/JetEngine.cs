@@ -1,5 +1,7 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Model.Entities.Airships.Engines; 
 
-public class JetEngine : Engine {
+public class JetEngine : AEngine {
     
 }

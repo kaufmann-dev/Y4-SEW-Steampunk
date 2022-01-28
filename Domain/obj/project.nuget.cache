@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2IFpDiq+uFylFG5ZGsQIsfjtrAW8nsLFLpzMBuQJA1XJFIpupJQlWJE4U5aHdS2odmaLlWr5gaPi9Ml4EjBQYg==",
+  "dgSpecHash": "bg6rDHJFyrP67v+g/K4L0h94qhnsw9Zx0vlWxAlDo91g33/n6Z/l+4OBPYc8EeR16QzcblcuiLCPK7/BAPgnMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\serbi\\Downloads\\steampunk\\steampunk\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\serbi\\Documents\\School projects\\steampunk\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\serbi\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\serbi\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",

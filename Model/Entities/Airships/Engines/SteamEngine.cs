@@ -1,5 +1,5 @@
 namespace Model.Entities.Airships.Engines; 
 
-public class SteamEngine : Engine {
+public class SteamEngine : AEngine {
     
 }
