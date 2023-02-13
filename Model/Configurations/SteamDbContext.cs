@@ -8,7 +8,7 @@ namespace Model.Configurations;
 public class SteamDbContext : DbContext {
 
     public DbSet<Airship> Airships { get; set; }
-    public DbSet<Engine> Engines { get; set; }
+    public DbSet<AEngine> Engines { get; set; }
     public DbSet<Motorization> Motorizations { get; set; }
     
     
@@ -21,9 +21,9 @@ public class SteamDbContext : DbContext {
         builder.Entity<Airship>().HasIndex(a=>a.Name).IsUnique();
         builder.Entity<Airship>().Property(a => a.DamageState).HasConversion<string>();
         
-        builder.Entity<Engine>().HasIndex(e => e.Label).IsUnique();
-        builder.Entity<Engine>().Property(e => e.PowerType).HasConversion<string>();
-        builder.Entity<Engine>()
+        builder.Entity<AEngine>().HasIndex(e => e.Label).IsUnique();
+        builder.Entity<AEngine>().Property(e => e.PowerType).HasConversion<string>();
+        builder.Entity<AEngine>()
             .HasDiscriminator<string>("ENGINE_TYPE")
             .HasValue<CombustionEngine>("COMBUSTION")
             .HasValue<SteamEngine>("STEAM")
@@ -34,15 +34,36 @@ public class SteamDbContext : DbContext {
             m.EngineId,
             m.AirshipId
         });
-
         builder.Entity<Motorization>()
             .HasOne(m => m.Airship)
             .WithMany()
             .HasForeignKey(m => m.AirshipId);
-        
         builder.Entity<Motorization>()
-            .HasOne(m => m.Engine)
+            .HasOne(m => m.AEngine)
             .WithMany()
             .HasForeignKey(m => m.EngineId);
+        
+        builder.Entity<Armory>().HasKey(m => new
+        {
+            m.WeaponId,
+            m.AirhipId,
+            m.Position
+        });
+        builder.Entity<Armory>()
+            .HasOne(m => m.Weapon)
+            .WithMany()
+            .HasForeignKey(m => m.WeaponId);
+        builder.Entity<Motorization>()
+            .Property(m => m.DamageState)
+            .HasConversion<string>();
+
+        builder.Entity<AWeapon>()
+            .HasDiscriminator("WEAPON_TYPE")
+            .HasValue<RapidFireWeapon>("RAPID_FIRE")
+            .HasValue<Bomb>("BOMB")
+            .HasValue<ProjectileWeapon>("PROJECTILE");
+        builder.Entity<AWeapon>()
+            .Property(m => m.Range)
+            .HasConversion<string>();
     }
 }

@@ -1,5 +1,5 @@
 namespace Model.Entities.Airships.Weapons; 
 
-public class RapidFireWeapon : Weapon {
+public class RapidFireWeapon : AWeapon {
     
 }

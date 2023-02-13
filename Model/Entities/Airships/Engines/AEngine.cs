@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Model.Entities.Airships.Engines; 
 
 [Table("ENGINES_ST")]
-public class Engine {
+public abstract class AEngine {
 
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Column("ENGINE_ID")]

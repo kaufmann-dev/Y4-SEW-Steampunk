@@ -671,11 +671,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\serbi\\Downloads\\steampunk\\steampunk\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\serbi\\Documents\\School projects\\steampunk\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\serbi\\Downloads\\steampunk\\steampunk\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\serbi\\Documents\\School projects\\steampunk\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\serbi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\serbi\\Downloads\\steampunk\\steampunk\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\serbi\\Documents\\School projects\\steampunk\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\serbi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -690,8 +690,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\serbi\\Downloads\\steampunk\\steampunk\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\serbi\\Downloads\\steampunk\\steampunk\\Model\\Model.csproj"
+            "C:\\Users\\serbi\\Documents\\School projects\\steampunk\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\serbi\\Documents\\School projects\\steampunk\\Model\\Model.csproj"
             }
           }
         }
@@ -720,7 +720,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\serbi\\.dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Model.Entities.Airships.Weapons; 
 
 [Table("WEAPONS_ST")]
-public class Weapon {
+public class AWeapon {
 
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Column("WEAPON_ID")]
