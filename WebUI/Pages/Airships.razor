@@ -1,0 +1,40 @@
+﻿@page "/airships/{AirshipId:int}"
+@using Domain.Repositories.Interfaces
+@using Model.Entities.Airships
+@inject ILogger<Airships> _logger
+@inject IAirshipRepository _repository
+
+<div class="container">
+    @if (Airship is not null) {
+        <h3>@Airship.Name <span class="text-warning">#@Airship.Id</span></h3>
+        <span>Speed: @Airship.Speed</span><br/>
+        <span>Armor: @Airship.ArmorValue</span><br/>
+        <span>Damage: @Airship.DamageState</span><br/>
+        <span>HullPoints: @Airship.HullPoints</span>
+    }
+    else {
+        <span>@Message</span>
+    }
+</div>
+
+@code {
+    
+    [Parameter]
+    public int AirshipId { get; set; }
+
+    public Airship Airship { get; set; }
+
+    public string Message { get; set; } = "Loading data ...";
+    
+    protected override async Task OnParametersSetAsync() {
+        var data = await _repository.ReadGraphAsync(a => a.Id == AirshipId);
+        //var data = new List<Airship>();
+        if (data.Count == 0) {
+            Message = "No data ...";
+        }
+        else {
+            Airship = data[0];
+            _logger.LogInformation($"Airship({AirshipId}) loaded");
+        }
+    }
+}
