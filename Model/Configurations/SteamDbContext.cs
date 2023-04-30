@@ -37,7 +37,6 @@ public class SteamDbContext : DbContext {
             .HasValue<CombustionEngine>("COMBUSTION")
             .HasValue<SteamEngine>("STEAM")
             .HasValue<JetEngine>("JET");
-
         
         
         builder.Entity<Motorization>().HasKey(m => new {
