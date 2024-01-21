@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Model.Entities.Airships.Engines;
+using Model.Entities.Airships.Weapons;
 
 namespace Model.Entities.Airships;
 
@@ -28,7 +30,8 @@ public class Airship {
 
     [Required]
     [Column("DAMAGE_STATE")]
-    [DataType(DataType.Text)]
     public EDamageState DamageState { get; set; }
-    
+
+    public List<Motorization> MotorizationList { get; set; } = new List<Motorization>();
+    public List<Armory> ArmoryList { get; set; } = new List<Armory>();
 }

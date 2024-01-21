@@ -26,5 +26,5 @@ public class AWeapon {
     [Required]
     [Column("RANGE")]
     public ERangeType Range { get; set; }
-    
+
 }
